@@ -1,4 +1,4 @@
-{{- if .Values.clickhouse.metrics.serviceMonitor.enabled }}
+{{- if and .Values.clickhouse.metrics.enabled .Values.clickhouse.metrics.serviceMonitor.enabled .Values.clickhouse.configmap.remote_servers.replica.backup.enabled }}
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:

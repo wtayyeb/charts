@@ -1,4 +1,4 @@
-{{- if .Values.clickhouse.configmap.remote_servers.replica.backup.enabled }}
+{{- if and .Values.clickhouse.metrics.enabled .Values.clickhouse.configmap.remote_servers.replica.backup.enabled }}
 apiVersion: v1
 kind: Service
 metadata:
