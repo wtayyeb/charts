@@ -5,7 +5,7 @@ metadata:
   name: {{ template "sentry.fullname" . }}-snuba
   labels:
     app: sentry
-    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+    chart: "{{ .Chart.Name }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
